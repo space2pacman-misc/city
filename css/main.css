@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+}
+
+.field {
+	position: relative;
+}
+
+.field > div {
+	width: 200px;
+	height: 200px;
+	display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+.cell {
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+}
+
+.empty {
+	border: 1px solid black;
+}
+
+.traffic-light {
+	background: black;
+}
+
+.traffic-light--stop {
+	background: red;
+}
+
+.traffic-light--ready {
+	background: orange;
+}
+
+.traffic-light--go {
+	background: green;
+}
