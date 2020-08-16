@@ -1,8 +1,7 @@
 class Layout extends EventEmitter {
-	constructor(type, field, w, h) {
+	constructor(type, w, h) {
 		super();
 		this._type = type;
-		this._field = field;
 		this._layout = [];
 		this._w = w;
 		this._h = h;
@@ -34,7 +33,7 @@ class Layout extends EventEmitter {
 	}
 
 	update() {
-		let type = this._field.querySelector(`.${this._type}`);
+		let type = Layout.field.querySelector(`.${this._type}`);
 
 		this.clear(type);
 		this._render();
@@ -82,10 +81,10 @@ class Layout extends EventEmitter {
 			}
 		}
 
-		let type = this._field.querySelector(`.${this._type}`);
+		let type = Layout.field.querySelector(`.${this._type}`);
 		
 		if(!type) {
-			this._field.append(layout);
+			Layout.field.append(layout);
 		} else {
 			for(let i = 0; i < layout.children.length; i++) {
 				type.replaceChild(layout.children[i].cloneNode(), type.children[i])
