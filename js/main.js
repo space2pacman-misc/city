@@ -2,23 +2,11 @@ Layout.field = document.querySelector(".field");
 
 let trafficLightLayout = new Layout("TrafficLight", 10, 10);
 let trafficLight = new TrafficLight(trafficLightLayout.create());
+let roadLayout = new Layout("Road", 10, 10);
+let road = new Road(roadLayout.create());
 
 trafficLight.add(2, 2);
 trafficLight.enable(2, 2);
-
-class Road extends EventEmitter {
-	constructor(layout) {
-		super();
-		this._layout = layout;
-	}
-
-	add(x, y) {
-		this._layout[x][y] = "02";
-		this.emit("onRoadUpdate");
-	}
-}
-let roadLayout = new Layout("Road", 10, 10);
-let road = new Road(roadLayout.create());
 
 road.add(7,1);
 road.add(6,1);
