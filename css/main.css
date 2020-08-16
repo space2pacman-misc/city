@@ -17,6 +17,7 @@ body {
 .cell {
 	width: 20px;
 	height: 20px;
+	border: 1px solid black;
 	box-sizing: border-box;
 }
 
@@ -24,6 +25,7 @@ body {
 	border: 1px solid black;
 }
 
+/* traffic */
 .traffic-light {
 	background: black;
 }
@@ -38,4 +40,9 @@ body {
 
 .traffic-light--go {
 	background: green;
+}
+
+/* road */
+.road {
+	background: grey;
 }

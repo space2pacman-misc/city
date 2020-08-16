@@ -1,4 +1,6 @@
 class Layout extends EventEmitter {
+	static field;
+
 	constructor(type, w, h) {
 		super();
 		this._type = type;
@@ -71,6 +73,11 @@ class Layout extends EventEmitter {
 
 								break;
 						}
+
+						break;
+					case "02":
+						element.className = "";
+						element.classList.add("road");
 
 						break;
 				}
