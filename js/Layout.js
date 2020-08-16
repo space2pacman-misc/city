@@ -80,6 +80,11 @@ class Layout extends EventEmitter {
 						element.classList.add("road");
 
 						break;
+					case "03":
+						element.className = "";
+						element.classList.add("car");
+
+						break;
 				}
 
 				element.classList.add("cell");

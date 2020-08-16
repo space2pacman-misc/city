@@ -32,4 +32,8 @@ class TrafficLight extends EventEmitter {
 
 		this.emit("onTrafficLightUpdate");
 	}
+
+	getLayout() {
+		return this._layout;
+	}
 }

@@ -8,4 +8,8 @@ class Road extends EventEmitter {
 		this._layout[x][y] = "02";
 		this.emit("onRoadUpdate");
 	}
+
+	getLayout() {
+		return this._layout;
+	}
 }
